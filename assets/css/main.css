@@ -2461,3 +2461,17 @@ input, select, textarea {
 		-webkit-text-fill-color: transparent; /* Nécessaire pour certains navigateurs */
 		text-fill-color: transparent; /* Standard CSS pour le remplissage du texte */
 	}
+
+	.cursor {
+		display: inline-block;
+		width: 10px;
+		background-color: black;
+		margin-left: 5px;
+		animation: blink 1s step-end infinite;
+	}
+	
+	@keyframes blink {
+		50% {
+			background-color: transparent;
+		}
+	}
