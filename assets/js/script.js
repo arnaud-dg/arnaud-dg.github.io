@@ -1,5 +1,5 @@
 // Initializing words
-var words = ["a pharmacist       ", "a data enthousiast ", "a chemical engineer", "a data scientist   ", "Ready To Help !    "], i = 0;
+var words = ["a pharmacist", "a data enthousiast", "a chemical engineer", "a data scientist", "Ready To Help !"], i = 0;
 
 setInterval(function() {
     $("#dynamic-text").fadeOut(function() {
@@ -16,6 +16,6 @@ setInterval(function() {
       }
       var char = word.shift();
       $("#dynamic-text").append(char);
-    }, 200);
+    }, 50);
 
 }, 3000); // Changez le temps selon la vitesse souhaitée
