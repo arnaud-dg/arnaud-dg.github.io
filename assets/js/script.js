@@ -1,5 +1,5 @@
 // Initialisation des mots
-var words = ["a pharmacist", "a data enthusiast", "a chemical engineer", "a data scientist", "Ready To Help !"];
+var words = ["a pharmacist", "a data enthusiast", "a chemical engineer", "a data scientist", "Ready To Help You!"];
 var i = 0;
 
 function typeEffect() {
