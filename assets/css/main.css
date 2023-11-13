@@ -2455,7 +2455,7 @@ input, select, textarea {
 	}
 
 	.gradient-text {
-		background-image: linear-gradient(0deg, #18BEE9, #C96FE1, #F45161); /* Gradient de couleur */
+		background-image: linear-gradient(90deg, #18BEE9, #C96FE1, #F45161); /* Gradient de couleur */
 		-webkit-background-clip: text;
 		background-clip: text;
 		-webkit-text-fill-color: transparent; /* Nécessaire pour certains navigateurs */
