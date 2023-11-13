@@ -1,21 +1,27 @@
-// Initializing words
-var words = ["a pharmacist", "a data enthousiast", "a chemical engineer", "a data scientist", "Ready To Help !"], i = 0;
+// Initialisation des mots
+var words = ["a pharmacist", "a data enthusiast", "a chemical engineer", "a data scientist", "Ready To Help !"];
+var i = 0;
 
-setInterval(function() {
-    $("#dynamic-text").fadeOut(function() {
-        $(this).html(words[i = (i + 1) % words.length]).fadeIn();
-    });
-
-    // Simuler l'effet de frappe
-    $("#dynamic-text").text("");
+function typeEffect() {
     var word = words[i].split("");
     var typingEffect = setInterval(function() {
-      if (!word.length) {
-        clearInterval(typingEffect);
-        return;
-      }
-      var char = word.shift();
-      $("#dynamic-text").append(char);
-    }, 1000);
+        if (!word.length) {
+            clearInterval(typingEffect); // Arrêter l'effet de frappe
+            i = (i + 1) % words.length; // Passer au mot suivant
+            setTimeout(changeWord, 2000); // Attendre avant de changer de mot
+            return;
+        }
+        var char = word.shift();
+        $("#dynamic-text").append(char);
+    }, 100); // Vitesse de frappe
+}
 
-}, 3000); // Changez le temps selon la vitesse souhaitée
+function changeWord() {
+    $("#dynamic-text").fadeOut(function() {
+        $(this).text(""); // Effacer le texte actuel
+        $(this).fadeIn(typeEffect); // Démarrer l'effet de frappe après le fondu
+    });
+}
+
+// Démarrer le processus
+changeWord();
