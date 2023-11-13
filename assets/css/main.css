@@ -2443,3 +2443,8 @@ input, select, textarea {
 					}
 
 	}
+
+	#dynamic-text {
+		color: #E91E63; /* La couleur de votre choix pour le texte dynamique */
+		font-weight: bold;
+	  }
