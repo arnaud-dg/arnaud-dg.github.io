@@ -16,6 +16,6 @@ setInterval(function() {
       }
       var char = word.shift();
       $("#dynamic-text").append(char);
-    }, 50);
+    }, 1000);
 
 }, 3000); // Changez le temps selon la vitesse souhaitée
