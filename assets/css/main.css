@@ -2454,11 +2454,6 @@ input, select, textarea {
 		font-weight: bold;
 	  }
 
-	.full-width-image {
-		width: 100%;
-		height: auto;
-	}
-
 	.gradient-text {
 		background-image: linear-gradient(90deg, #18BEE9, #C96FE1, #F45161); /* Gradient de couleur */
 		-webkit-background-clip: text;
@@ -2479,4 +2474,9 @@ input, select, textarea {
 		50% {
 			background-color: transparent;
 		}
+	}
+
+	.full-width-image {
+		width: 100%;
+		height: auto;
 	}
