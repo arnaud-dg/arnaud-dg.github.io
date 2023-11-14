@@ -2482,10 +2482,12 @@ input, select, textarea {
 	}
 
 	.key-figure {
-		text-align: center;
+		text-align: center; /* Centrer le texte */
 		padding: 20px;
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Effet d'ombre */
 		margin: 10px;
+		border: 2px solid #ccc; /* Bordure */
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Effet d'ombre */
+		background-color: #fafafa; /* Couleur de fond */
 	}
 	
 	.key-figure h2 {
@@ -2493,5 +2495,5 @@ input, select, textarea {
 	}
 	
 	.key-figure p {
-		font-size: 1em; /* Taille du texte descriptif */
+		font-size: 0.5em; /* Taille du texte descriptif */
 	}
