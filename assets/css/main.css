@@ -2482,18 +2482,19 @@ input, select, textarea {
 	}
 
 	.key-figure {
-		text-align: center; /* Centrer le texte */
-		padding: 20px;
-		margin: 10px;
-		border: 2px solid #ccc; /* Bordure */
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Effet d'ombre */
-		background-color: #fafafa; /* Couleur de fond */
+		background-color: #fafafa;
+		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+		text-align: center;
+		padding: 2em;
+		border: 1px solid #ccc; /* Bordure */
 	}
 	
 	.key-figure h2 {
-		font-size: 3em; /* Taille du chiffre */
+		font-size: 2.5em; /* Taille du chiffre */
+		padding: 0.2em 2em 0.5em 2em;
 	}
 	
 	.key-figure p {
-		font-size: 0.5em; /* Taille du texte descriptif */
+		font-size: 0.25em; /* Taille du texte descriptif */
+		padding: 0.2em 2em 0.5em 2em;
 	}
