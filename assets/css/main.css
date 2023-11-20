@@ -204,6 +204,11 @@ input, select, textarea {
 		margin-bottom: 2em;
 	}
 
+	li {
+		text-align: left; /* Justifie le texte des paragraphes et éléments de liste à gauche */
+		font-size: small; /* Taille de police réduite pour les paragraphes et éléments de liste */
+	  }
+
 	header {
 		margin: 0 0 3em 0;
 	}
