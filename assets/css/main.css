@@ -2546,20 +2546,21 @@ input, select, textarea {
 
 .info-section {
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   padding: 20px;
-  background-color: #f5f5f5; /* Changer au besoin pour correspondre à votre palette de couleurs */
+  background-color: #ffffff; /* Fond blanc */
 }
 
 .info-card {
   background: #ffffff;
-  border: 2px solid #eaeaea; /* Bordure légère pour le cadre */
+  border: 1px solid #ddd; /* Bordure subtile */
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   text-align: center;
-  width: 80%; /* Ajuster la largeur au besoin */
-  margin-bottom: 20px; /* Espacement entre les cartes */
+  width: 30%; /* Ajuster la largeur au besoin */
+  margin: 10px; /* Espacement autour des cartes */
+  padding: 20px; /* Padding à l'intérieur des cartes */
   transition: transform 0.3s ease;
 }
 
@@ -2568,18 +2569,17 @@ input, select, textarea {
 }
 
 .info-icon img {
-  width: 40px; /* Réduit la taille de l'icône */
+  width: 30px; /* Taille de l'icône ajustée */
   margin-bottom: 10px;
 }
 
 .info-content h3 {
   color: #333;
-  font-size: 1.5em; /* Réduit la taille du texte */
-  margin: 5px 0; /* Ajuster l'espacement */
+  font-size: 1.2em; /* Taille de police ajustée pour le titre */
+  margin: 5px 0;
 }
 
 .info-content p {
   color: #666;
-  font-size: 0.9em; /* Réduit la taille du texte secondaire */
-  margin-bottom: 15px;
+  font-size: 0.9em; /* Taille de police ajustée pour le sous-titre */
 }
