@@ -2558,7 +2558,7 @@ input, select, textarea {
   border-radius: 15px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   text-align: center;
-  width: 25%; /* Ajuster la largeur au besoin */
+  width: 30%; /* Ajuster la largeur au besoin */
   margin: 20px; /* Espacement autour des cartes */
   padding: 5px 20px 5px 20px; /* Padding à l'intérieur des cartes */
   transition: transform 0.3s ease;
@@ -2581,5 +2581,5 @@ input, select, textarea {
 
 .info-content p {
   color: #666;
-  font-size: 0.6em; /* Taille de police ajustée pour le sous-titre */
+  font-size: 0.5em; /* Taille de police ajustée pour le sous-titre */
 }
