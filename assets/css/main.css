@@ -2559,8 +2559,8 @@ input, select, textarea {
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   text-align: center;
   width: 30%; /* Ajuster la largeur au besoin */
-  margin: 20px; /* Espacement autour des cartes */
-  padding: 5px 20px 5px 20px; /* Padding à l'intérieur des cartes */
+  margin: 15px; /* Espacement autour des cartes */
+  padding: 5px; /* Padding à l'intérieur des cartes */
   transition: transform 0.3s ease;
 }
 
@@ -2576,10 +2576,12 @@ input, select, textarea {
 .info-content h3 {
   color: #333;
   font-size: 1.8em; /* Taille de police ajustée pour le titre */
+  text-align: center;
   margin: 5px 0;
 }
 
 .info-content p {
   color: #666;
-  font-size: 0.5em; /* Taille de police ajustée pour le sous-titre */
+  text-align: center;
+  font-size: 10px; /* Taille de police ajustée pour le sous-titre */
 }
