@@ -2561,6 +2561,11 @@ input, select, textarea {
   width: 30%; /* Ajuster la largeur au besoin */
   margin: 15px; /* Espacement autour des cartes */
   padding: 5px; /* Padding à l'intérieur des cartes */
+  display: flex; /* Utilisation de flexbox */
+  flex-direction: column; /* Les éléments s'organisent en colonne */
+  justify-content: center; /* Centre verticalement */
+  align-items: center; /* Centre horizontalement */
+  height: 150px; /* Ajuster en fonction du contenu */
   transition: transform 0.3s ease;
 }
 
