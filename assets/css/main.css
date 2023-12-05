@@ -2560,7 +2560,7 @@ input, select, textarea {
   text-align: center;
   width: 30%; /* Ajuster la largeur au besoin */
   margin: 15px; /* Espacement autour des cartes */
-  padding: 5px; /* Padding à l'intérieur des cartes */
+  padding: 40px 5px 10px 5px; /* Padding à l'intérieur des cartes */
   display: flex; /* Utilisation de flexbox */
   flex-direction: column; /* Les éléments s'organisent en colonne */
   justify-content: center; /* Centre verticalement */
