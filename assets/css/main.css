@@ -2553,14 +2553,14 @@ input, select, textarea {
 }
 
 .info-card {
-  background: #ffffff;
+  background: #fafafa;
   border: 1px solid #ddd; /* Bordure subtile */
   border-radius: 15px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   text-align: center;
-  width: 30%; /* Ajuster la largeur au besoin */
-  margin: 10px; /* Espacement autour des cartes */
-  padding: 20px; /* Padding à l'intérieur des cartes */
+  width: 25%; /* Ajuster la largeur au besoin */
+  margin: 20px; /* Espacement autour des cartes */
+  padding: 5px 20px 5px 20px; /* Padding à l'intérieur des cartes */
   transition: transform 0.3s ease;
 }
 
@@ -2569,17 +2569,17 @@ input, select, textarea {
 }
 
 .info-icon img {
-  width: 30px; /* Taille de l'icône ajustée */
+  width: 80px; /* Taille de l'icône ajustée */
   margin-bottom: 10px;
 }
 
 .info-content h3 {
   color: #333;
-  font-size: 1.2em; /* Taille de police ajustée pour le titre */
+  font-size: 1.8em; /* Taille de police ajustée pour le titre */
   margin: 5px 0;
 }
 
 .info-content p {
   color: #666;
-  font-size: 0.9em; /* Taille de police ajustée pour le sous-titre */
+  font-size: 0.6em; /* Taille de police ajustée pour le sous-titre */
 }
