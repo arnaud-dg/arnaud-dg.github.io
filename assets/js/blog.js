@@ -1,13 +1,13 @@
 // Exemple de données de blog
 const blogPosts = [
-    { date: 'May 1, 2024', title: 'A Personal Take on Tech Debt', link: 'blog/article1.md' },
-    { date: 'Mar 17, 2024', title: 'The Rise Of Version Control Systems', link: 'blog/article2.md' },
-    { date: 'Mar 10, 2024', title: 'A Personal Take On Data Engineering', link: 'blog/article3.md' },
-    { date: 'Mar 1, 2024', title: 'There\'s Nothing Like Real Usage', link: 'blog/article4.md' },
-    { date: 'Feb 25, 2024', title: 'Datasets are never finished', link: 'blog/article5.md' },
-    { date: 'Feb 10, 2024', title: 'A Tooling Tidbit', link: 'blog/article6.md' },
-    { date: 'Jan 25, 2024', title: 'Another Blog Post', link: 'blog/article7.md' },
-    { date: 'Jan 10, 2024', title: 'Yet Another Blog Post', link: 'blog/article8.md' }
+    { date: 'May 1, 2024', title: 'A Personal Take on Tech Debt', link: 'blog/article.md' },
+    { date: 'Mar 17, 2024', title: 'The Rise Of Version Control Systems', link: 'blog/article.md' },
+    { date: 'Mar 10, 2024', title: 'A Personal Take On Data Engineering', link: 'blog/article.md' },
+    { date: 'Mar 1, 2024', title: 'There\'s Nothing Like Real Usage', link: 'blog/article.md' },
+    { date: 'Feb 25, 2024', title: 'Datasets are never finished', link: 'blog/article.md' },
+    { date: 'Feb 10, 2024', title: 'A Tooling Tidbit', link: 'blog/article.md' },
+    { date: 'Jan 25, 2024', title: 'Another Blog Post', link: 'blog/article.md' },
+    { date: 'Jan 10, 2024', title: 'Yet Another Blog Post', link: 'blog/article.md' }
 ];
 
 let currentPage = 1;
