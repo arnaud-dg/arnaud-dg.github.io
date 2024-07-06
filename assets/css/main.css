@@ -2058,6 +2058,12 @@ input, select, textarea {
 			text-shadow: 1px 1px 0px #fff;
 		}
 
+		.wrapper.style6 {
+			background-color: #dddddd;
+			text-shadow: 1px 1px 0px #fff;
+		}
+
+
 		.wrapper.style5 {
 			background-color: #303030;
 			color: #999;
