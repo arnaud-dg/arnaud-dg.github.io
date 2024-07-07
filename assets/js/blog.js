@@ -1,6 +1,11 @@
 const githubUsername = 'arnaud-dg';
 const repoName = 'arnaud-dg.github.io';
 
+console.log("blog.js chargé");
+
+let currentPage = 1;
+const postsPerPage = 6; // Nombre d'articles par page
+
 async function fetchBlogPosts() {
     const response = await fetch('https://api.github.com/repos/${githubUsername}/${repoName}/contents/blog');
     const files = await response.json();
