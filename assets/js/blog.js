@@ -1,19 +1,18 @@
-// Exemple de données de blog
-const blogPosts = [
-    { date: 'May 1, 2024', title: 'A Personal Take on Tech Debt', link: 'blog/article.md' },
-    { date: 'Mar 17, 2024', title: 'The Rise Of Version Control Systems', link: 'blog/article.md' },
-    { date: 'Mar 10, 2024', title: 'A Personal Take On Data Engineering', link: 'blog/article.md' },
-    { date: 'Mar 1, 2024', title: 'There\'s Nothing Like Real Usage', link: 'blog/article.md' },
-    { date: 'Feb 25, 2024', title: 'Datasets are never finished', link: 'blog/article.md' },
-    { date: 'Feb 10, 2024', title: 'A Tooling Tidbit', link: 'blog/article.md' },
-    { date: 'Jan 25, 2024', title: 'Another Blog Post', link: 'blog/article.md' },
-    { date: 'Jan 10, 2024', title: 'Yet Another Blog Post', link: 'blog/article.md' }
-];
+const githubUsername = 'arnaud-dg';
+const repoName = 'arnaud-dg.github.io';
 
-let currentPage = 1;
-const postsPerPage = 6;
+async function fetchBlogPosts() {
+    const response = await fetch(`https://api.github.com/repos/${githubUsername}/${repoName}/blog`);
+    const files = await response.json();
+    const blogPosts = files.map(file => {
+        const [date, title] = file.name.replace('.md', '').split(' - ');
+        return { date, title, link: `blog/${file.name}` };
+    });
 
-function renderPosts() {
+    return blogPosts;
+}
+
+function renderPosts(blogPosts) {
     const blogContainer = document.getElementById('blog-posts');
     blogContainer.innerHTML = '';
     const start = (currentPage - 1) * postsPerPage;
@@ -30,16 +29,16 @@ function renderPosts() {
 document.getElementById('prevBtn').addEventListener('click', () => {
     if (currentPage > 1) {
         currentPage--;
-        renderPosts();
+        fetchBlogPosts().then(renderPosts);
     }
 });
 
 document.getElementById('nextBtn').addEventListener('click', () => {
     if (currentPage * postsPerPage < blogPosts.length) {
         currentPage++;
-        renderPosts();
+        fetchBlogPosts().then(renderPosts);
     }
 });
 
 // Initial render
-renderPosts();
+fetchBlogPosts().then(renderPosts);
