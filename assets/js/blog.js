@@ -10,7 +10,7 @@ const postsPerPage = 6; // Nombre d'articles par page
 async function fetchBlogPosts() {
     try {
         console.log("Fetching blog posts...");
-        const apiUrl = `https://api.github.com/repos/${githubUsername}/${repoName}/contents/blog`;
+        const apiUrl = 'https://api.github.com/repos/arnaud-dg/arnaud-dg.github.io/contents/blog';
         const response = await fetch(apiUrl);
         if (!response.ok) {
             throw new Error(`Erreur de réseau : ${response.statusText}`);
