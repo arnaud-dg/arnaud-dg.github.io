@@ -9,7 +9,9 @@ const postsPerPage = 6; // Nombre d'articles par page
 // Fonction pour récupérer les articles de blog depuis l'API GitHub
 async function fetchBlogPosts() {
     try {
-        const response = await fetch(`https://api.github.com/repos/${githubUsername}/${repoName}/contents/blog`);
+        console.log("Fetching blog posts...");
+        const apiUrl = `https://api.github.com/repos/${githubUsername}/${repoName}/contents/blog`;
+        const response = await fetch(apiUrl);
         if (!response.ok) {
             throw new Error(`Erreur de réseau : ${response.statusText}`);
         }
@@ -36,7 +38,12 @@ async function fetchBlogPosts() {
 
 // Fonction pour afficher les articles de blog
 function renderPosts(blogPosts) {
+    console.log("Rendering posts...");
     const blogContainer = document.getElementById('blog-posts'); // Sélection de l'élément HTML où les articles seront insérés
+    if (!blogContainer) {
+        console.error("Element #blog-posts not found!");
+        return;
+    }
     blogContainer.innerHTML = ''; // Réinitialiser le contenu de l'élément
     const start = (currentPage - 1) * postsPerPage; // Calcul du premier article à afficher pour la page actuelle
     const end = start + postsPerPage; // Calcul du dernier article à afficher pour la page actuelle
@@ -49,15 +56,16 @@ function renderPosts(blogPosts) {
     });
 }
 
-// Événements pour la pagination
 document.getElementById('prevBtn').addEventListener('click', () => {
+    console.log("Previous button clicked");
     if (currentPage > 1) {
         currentPage--;
-        fetchBlogPosts().then(renderPosts); // Récupérer les articles de blog et les afficher
+        fetchBlogPosts().then(renderPosts);
     }
 });
 
 document.getElementById('nextBtn').addEventListener('click', () => {
+    console.log("Next button clicked");
     fetchBlogPosts().then(blogPosts => {
         if (currentPage * postsPerPage < blogPosts.length) {
             currentPage++;
@@ -68,5 +76,6 @@ document.getElementById('nextBtn').addEventListener('click', () => {
 
 // Rendu initial des articles de blog
 fetchBlogPosts().then(blogPosts => {
+    console.log("Initial render");
     renderPosts(blogPosts); // Récupérer les articles de blog et les afficher
 });
