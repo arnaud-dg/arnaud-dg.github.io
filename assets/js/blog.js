@@ -39,6 +39,7 @@ async function fetchBlogPosts() {
 // Fonction pour afficher les articles de blog
 function renderPosts(blogPosts) {
     console.log("Rendering posts...");
+    console.log(blogPosts);
     const blogContainer = document.getElementById('blog-posts'); // Sélection de l'élément HTML où les articles seront insérés
     if (!blogContainer) {
         console.error("Element #blog-posts not found!");
