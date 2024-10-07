@@ -2597,16 +2597,16 @@ input, select, textarea {
   font-size: 10px; /* Taille de police ajustée pour le sous-titre */
 }
 
-.blog-container {
+blog-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .blog-post {
-    display: none;
-}
-.blog-post.active {
-    display: block;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
 }
 .pagination {
     margin-top: 20px;
