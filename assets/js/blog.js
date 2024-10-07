@@ -15,19 +15,20 @@ async function loadLocalPosts() {
             date: new Date(post.date),
             title: post.title,
             link: post.link,
-            description: post.description
+            language: post.title.startsWith('FR') ? 'FR' : 'ENG',
+            project: post.description.match(/Project #(\d+)/) ? post.description.match(/Project #(\d+)/)[1] : 'N/A'
         }));
         
         displayPosts();
     } catch (error) {
         console.error('Erreur lors du chargement des articles:', error);
-        document.getElementById('blog-posts').innerHTML = '<p>Erreur lors du chargement des articles. Veuillez réessayer plus tard.</p>';
+        document.getElementById('blog-posts').innerHTML = '<tr><td colspan="4">Erreur lors du chargement des articles. Veuillez réessayer plus tard.</td></tr>';
     }
 }
 
 // Fonction pour afficher les articles
 function displayPosts() {
-    const blogPostsContainer = document.getElementById('blog-posts');
+    const blogPostsContainer = document.querySelector('#blog-posts tbody');
     blogPostsContainer.innerHTML = '';
     
     const startIndex = currentPage * postsPerPage;
@@ -35,21 +36,18 @@ function displayPosts() {
     const postsToDisplay = allPosts.slice(startIndex, endIndex);
     
     postsToDisplay.forEach(post => {
-        const postElement = document.createElement('div');
-        postElement.className = 'blog-post';
+        const row = document.createElement('tr');
         
         const dateStr = post.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-        const language = post.title.startsWith('FR') ? 'FR' : 'ENG';
-        const projectNumber = post.description.match(/#(\d+)/)?.[1] || '';
         
-        postElement.innerHTML = `
-            <p>${dateStr}</p>
-            <h3><a href="${post.link}">${post.title}</a></h3>
-            <p>Language: ${language}</p>
-            <p>${post.description}</p>
+        row.innerHTML = `
+            <td>${dateStr}</td>
+            <td><a href="${post.link}" target="_blank">${post.title}</a></td>
+            <td>${post.language}</td>
+            <td>${post.project}</td>
         `;
         
-        blogPostsContainer.appendChild(postElement);
+        blogPostsContainer.appendChild(row);
     });
     
     updatePaginationButtons();
