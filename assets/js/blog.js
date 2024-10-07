@@ -5,21 +5,29 @@ const postsPerPage = 10;
 
 // Fonction pour charger les articles RSS
 async function loadRSSFeed() {
-    const response = await fetch('https://databoostindustry.substack.com/feed');
-    const text = await response.text();
-    const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(text, "text/xml");
-    const items = xmlDoc.getElementsByTagName("item");
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    const targetUrl = 'https://databoostindustry.substack.com/feed';
     
-    allPosts = Array.from(items).map(item => ({
-        date: new Date(item.getElementsByTagName("pubDate")[0].textContent),
-        title: item.getElementsByTagName("title")[0].textContent,
-        link: item.getElementsByTagName("link")[0].textContent,
-        description: item.getElementsByTagName("description")[0].textContent
-    }));
-    
-    allPosts.sort((a, b) => b.date - a.date);
-    displayPosts();
+    try {
+        const response = await fetch(proxyUrl + targetUrl);
+        const text = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(text, "text/xml");
+        const items = xmlDoc.getElementsByTagName("item");
+        
+        allPosts = Array.from(items).map(item => ({
+            date: new Date(item.getElementsByTagName("pubDate")[0].textContent),
+            title: item.getElementsByTagName("title")[0].textContent,
+            link: item.getElementsByTagName("link")[0].textContent,
+            description: item.getElementsByTagName("description")[0].textContent
+        }));
+        
+        allPosts.sort((a, b) => b.date - a.date);
+        displayPosts();
+    } catch (error) {
+        console.error('Erreur lors du chargement du flux RSS:', error);
+        document.getElementById('blog-posts').innerHTML = '<p>Erreur lors du chargement des articles. Veuillez réessayer plus tard.</p>';
+    }
 }
 
 // Fonction pour afficher les articles
