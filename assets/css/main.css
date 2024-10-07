@@ -2597,37 +2597,47 @@ input, select, textarea {
   font-size: 10px; /* Taille de police ajustée pour le sous-titre */
 }
 
-blog-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.blog-post {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-.pagination {
-    margin-top: 20px;
-}
-.pagination button {
-    margin: 0 5px;
-    padding: 5px 10px;
+#blog {
+    color: #000;  /* Texte en noir */
 }
 
-#blog p {
-    margin-bottom: 20px;
-    font-size: 1.1em;
+#blog-posts {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;  /* Espace vertical entre les lignes */
+}
+
+#blog-posts th,
+#blog-posts td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+#blog-posts th {
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+}
+
+#blog-posts td {
+    border-bottom: 1px solid #eee;
+}
+
+#blog-posts a {
+    color: #43B3E0;
+    text-decoration: none;
+}
+
+#blog-posts a:hover {
+    text-decoration: underline;
+}
+
+.pagination {
+    margin-top: 20px;
     text-align: center;
 }
 
-#blog p a {
-    color: #43B3E0;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#blog p a:hover {
-    text-decoration: underline;
+.pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
 }
