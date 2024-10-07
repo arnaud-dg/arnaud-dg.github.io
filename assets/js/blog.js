@@ -3,21 +3,19 @@ let allPosts = [];
 let currentPage = 0;
 const postsPerPage = 10;
 
-// Fonction pour charger les articles via l'API Substack
-async function loadSubstackPosts() {
-    const apiUrl = 'https://databoostindustry.substack.com/api/v1/archive?sort=new';
-    
+// Fonction pour charger les articles depuis le fichier JSON local
+async function loadLocalPosts() {
     try {
-        console.log('Tentative de chargement des articles via l\'API Substack...');
-        const response = await fetch(apiUrl);
+        console.log('Tentative de chargement des articles depuis le fichier JSON local...');
+        const response = await fetch('/blog-posts.json');
         const data = await response.json();
-        console.log('Réponse reçue:', data);
+        console.log('Données reçues:', data);
 
         allPosts = data.map(post => ({
-            date: new Date(post.post_date),
+            date: new Date(post.date),
             title: post.title,
-            link: `https://databoostindustry.substack.com/p/${post.slug}`,
-            description: post.description || 'The Pharm\'AI Company'
+            link: post.link,
+            description: post.description
         }));
         
         displayPosts();
@@ -48,7 +46,7 @@ function displayPosts() {
             <p>${dateStr}</p>
             <h3><a href="${post.link}">${post.title}</a></h3>
             <p>Language: ${language}</p>
-            <p>The Pharm'AI Company ${projectNumber ? `#${projectNumber}` : ''}</p>
+            <p>${post.description}</p>
         `;
         
         blogPostsContainer.appendChild(postElement);
@@ -82,4 +80,4 @@ document.getElementById('nextBtn').addEventListener('click', () => {
 });
 
 // Charger les articles au chargement de la page
-document.addEventListener('DOMContentLoaded', loadSubstackPosts);
+document.addEventListener('DOMContentLoaded', loadLocalPosts);
