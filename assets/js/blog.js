@@ -3,29 +3,26 @@ let allPosts = [];
 let currentPage = 0;
 const postsPerPage = 10;
 
-// Fonction pour charger les articles RSS
-async function loadRSSFeed() {
-    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-    const targetUrl = 'https://databoostindustry.substack.com/feed';
+// Fonction pour charger les articles via l'API Substack
+async function loadSubstackPosts() {
+    const apiUrl = 'https://databoostindustry.substack.com/api/v1/archive?sort=new';
     
     try {
-        const response = await fetch(proxyUrl + targetUrl);
-        const text = await response.text();
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(text, "text/xml");
-        const items = xmlDoc.getElementsByTagName("item");
-        
-        allPosts = Array.from(items).map(item => ({
-            date: new Date(item.getElementsByTagName("pubDate")[0].textContent),
-            title: item.getElementsByTagName("title")[0].textContent,
-            link: item.getElementsByTagName("link")[0].textContent,
-            description: item.getElementsByTagName("description")[0].textContent
+        console.log('Tentative de chargement des articles via l\'API Substack...');
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        console.log('Réponse reçue:', data);
+
+        allPosts = data.map(post => ({
+            date: new Date(post.post_date),
+            title: post.title,
+            link: `https://databoostindustry.substack.com/p/${post.slug}`,
+            description: post.description || 'The Pharm\'AI Company'
         }));
         
-        allPosts.sort((a, b) => b.date - a.date);
         displayPosts();
     } catch (error) {
-        console.error('Erreur lors du chargement du flux RSS:', error);
+        console.error('Erreur lors du chargement des articles:', error);
         document.getElementById('blog-posts').innerHTML = '<p>Erreur lors du chargement des articles. Veuillez réessayer plus tard.</p>';
     }
 }
@@ -51,7 +48,7 @@ function displayPosts() {
             <p>${dateStr}</p>
             <h3><a href="${post.link}">${post.title}</a></h3>
             <p>Language: ${language}</p>
-            <p>The Pharm'AI Company #${projectNumber}</p>
+            <p>The Pharm'AI Company ${projectNumber ? `#${projectNumber}` : ''}</p>
         `;
         
         blogPostsContainer.appendChild(postElement);
@@ -85,4 +82,4 @@ document.getElementById('nextBtn').addEventListener('click', () => {
 });
 
 // Charger les articles au chargement de la page
-document.addEventListener('DOMContentLoaded', loadRSSFeed);
+document.addEventListener('DOMContentLoaded', loadSubstackPosts);
