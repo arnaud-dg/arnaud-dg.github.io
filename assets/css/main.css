@@ -2629,7 +2629,9 @@ input, select, textarea {
 }
 
 #blog-posts a:hover {
-    text-decoration: underline;
+    color: black;
+	text-decoration: underline;
+	font-weight: bold;
 }
 
 .pagination {
