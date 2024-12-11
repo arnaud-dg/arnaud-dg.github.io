@@ -1,5 +1,113 @@
 [
   {
+    "date": "Thu, 28 Nov 2024 17:21:03 GMT",
+    "title": "ENG - The \"OMICS\" project - Part 2 : The Kawasaki case study",
+    "link": "https://databoostindustry.substack.com/p/eng-the-omics-project-part-2-the",
+    "description": "The Pharm'AI Company - Project #6"
+  },
+  {
+    "date": "Thu, 28 Nov 2024 17:20:14 GMT",
+    "title": "FR - L'analyse de données \"OMICS\" - Partie 2 : Le cas pratique Kawasaki",
+    "link": "https://databoostindustry.substack.com/p/fr-lanalyse-de-donnees-omics-partie-ece",
+    "description": "The Pharm'AI Company - Projet #6"
+  },
+  {
+    "date": "Thu, 21 Nov 2024 20:43:14 GMT",
+    "title": "ENG - The \"OMICS\" project - Part 1 : The project brief",
+    "link": "https://databoostindustry.substack.com/p/eng-the-omics-project-part-1-the",
+    "description": "The Pharm'AI Company - Project #6"
+  },
+  {
+    "date": "Thu, 21 Nov 2024 20:34:52 GMT",
+    "title": "FR - L'analyse de données \"OMICS\" - Partie 1 : Le pitch projet",
+    "link": "https://databoostindustry.substack.com/p/fr-lanalyse-de-donnees-omics-partie",
+    "description": "The Pharm'AI Company - Projet #6"
+  },
+  {
+    "date": "Wed, 13 Nov 2024 22:04:50 GMT",
+    "title": "FR - Maintenance prédictive - Partie 3: La modélisation",
+    "link": "https://databoostindustry.substack.com/p/fr-maintenance-predictive-partie-f19",
+    "description": "The Pharm'AI Company - Projet #5"
+  },
+  {
+    "date": "Wed, 13 Nov 2024 22:04:11 GMT",
+    "title": "ENG - Machine Learning based Predictive Maintenance - Part 3 : The modeling part",
+    "link": "https://databoostindustry.substack.com/p/eng-machine-learning-based-predictive-32d",
+    "description": "The Pharm'AI Company - Project #5"
+  },
+  {
+    "date": "Tue, 05 Nov 2024 16:44:36 GMT",
+    "title": "ENG - Machine Learning based Predictive Maintenance - Part 2 : Data Analysis",
+    "link": "https://databoostindustry.substack.com/p/eng-machine-learning-based-predictive-92a",
+    "description": "The Pharm'AI Company - Project #5"
+  },
+  {
+    "date": "Tue, 05 Nov 2024 16:44:19 GMT",
+    "title": "FR - Maintenance prédictive - Partie 2 : L'analyse des données",
+    "link": "https://databoostindustry.substack.com/p/fr-maintenance-predictive-partie-aaf",
+    "description": "The Pharm'AI Company - Projet #5"
+  },
+  {
+    "date": "Tue, 29 Oct 2024 16:36:04 GMT",
+    "title": "FR - Maintenance prédictive - Partie 1 : Le pitch projet",
+    "link": "https://databoostindustry.substack.com/p/fr-maintenance-predictive-partie",
+    "description": "The Pharm'AI Company - Projet #5"
+  },
+  {
+    "date": "Tue, 29 Oct 2024 16:35:11 GMT",
+    "title": "ENG - Machine Learning based Predictive Maintenance - Part 1 : The project brief",
+    "link": "https://databoostindustry.substack.com/p/eng-machine-learning-based-predictive",
+    "description": "The Pharm'AI Company - Project #5"
+  },
+  {
+    "date": "Fri, 25 Oct 2024 13:12:20 GMT",
+    "title": "FR - Base de connaissances sur les dispositifs médicaux IA - Partie 3 : Le prototype",
+    "link": "https://databoostindustry.substack.com/p/fr-base-de-connaissances-sur-les-d6d",
+    "description": "The Pharm'AI Company - Projet #4"
+  },
+  {
+    "date": "Fri, 25 Oct 2024 13:12:01 GMT",
+    "title": "ENG - AI Medical Devices Knowledge Base - Part 3: The First Iteration",
+    "link": "https://databoostindustry.substack.com/p/eng-ai-medical-devices-knowledge-889",
+    "description": "The Pharm'AI Company - Project #4"
+  },
+  {
+    "date": "Tue, 22 Oct 2024 14:45:52 GMT",
+    "title": "ENG - AI Medical Devices Knowledge Base - Part 2: The RAG concept",
+    "link": "https://databoostindustry.substack.com/p/eng-ai-medical-devices-knowledge-466",
+    "description": "The Pharm'AI Company - Project #4"
+  },
+  {
+    "date": "Tue, 22 Oct 2024 14:45:41 GMT",
+    "title": "FR - Base de connaissances sur les dispositifs médicaux IA - Partie 2 : Le concept de RAG",
+    "link": "https://databoostindustry.substack.com/p/fr-base-de-connaissances-sur-les-03c",
+    "description": "The Pharm'AI Company - Projet #4"
+  },
+  {
+    "date": "Tue, 15 Oct 2024 16:02:23 GMT",
+    "title": "ENG - AI Medical Devices Knowledge Base - Part 1 : The project brief",
+    "link": "https://databoostindustry.substack.com/p/eng-ai-medical-devices-knowledge",
+    "description": "The Pharm'AI Company - Project #4"
+  },
+  {
+    "date": "Tue, 15 Oct 2024 16:00:22 GMT",
+    "title": "FR - Base de connaissances sur les dispositifs médicaux IA - Partie 1 : Le pitch projet",
+    "link": "https://databoostindustry.substack.com/p/fr-base-de-connaissances-sur-les",
+    "description": "The Pharm'AI Company - Projet #4"
+  },
+  {
+    "date": "Mon, 07 Oct 2024 10:30:46 GMT",
+    "title": "ENG - CPV 4.0 - Part 3 : Multivariate analysis for better understanding",
+    "link": "https://databoostindustry.substack.com/p/eng-cpv-40-part-3-multivariate-analysis",
+    "description": "The Pharm'AI Company - Project #3"
+  },
+  {
+    "date": "Mon, 07 Oct 2024 10:30:39 GMT",
+    "title": "FR - CPV 4.0 - Partie 3 : L'apport de l'analyse multivariée",
+    "link": "https://databoostindustry.substack.com/p/fr-cpv-40-partie-3-lapport-de-lanalyse",
+    "description": "The Pharm'AI Company - Projet #3"
+  },
+  {
     "date": "Thu, 03 Oct 2024 08:55:07 GMT",
     "title": "ENG - CPV 4.0 - Part 2 : Automate the CPV process",
     "link": "https://databoostindustry.substack.com/p/eng-cpv-40-part-2-automate-the-cpv",

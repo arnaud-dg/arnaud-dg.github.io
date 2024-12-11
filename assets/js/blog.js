@@ -14,15 +14,13 @@ async function loadLocalPosts() {
         allPosts = data.map(post => ({
             date: new Date(post.date),
             title: post.title,
-            link: post.link,
-            language: post.title.startsWith('FR') ? 'FR' : 'ENG',
-            project: post.description.match(/Project #(\d+)/) ? post.description.match(/Project #(\d+)/)[1] : 'N/A'
+            link: post.link
         }));
         
         displayPosts();
     } catch (error) {
         console.error('Erreur lors du chargement des articles:', error);
-        document.getElementById('blog-posts').innerHTML = '<tr><td colspan="4">Erreur lors du chargement des articles. Veuillez réessayer plus tard.</td></tr>';
+        document.getElementById('blog-posts').innerHTML = '<tr><td colspan="2">Erreur lors du chargement des articles. Veuillez réessayer plus tard.</td></tr>';
     }
 }
 
@@ -43,8 +41,6 @@ function displayPosts() {
         row.innerHTML = `
             <td>${dateStr}</td>
             <td><a href="${post.link}" target="_blank">${post.title}</a></td>
-            <td>${post.language}</td>
-            <td>${post.project}</td>
         `;
         
         blogPostsContainer.appendChild(row);
